@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calulter</title>
+    <style>
+        #later{
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: rgb(179, 199, 199);
+            background-image: url(3d-rendering-hexagonal-texture-background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        
+        }
+        #input{
+            margin-top: 10px;
+            margin-left: 50px;
+            width: 90%;
+            font-size:50px;
+    border: none;
+    border-radius: 2px;
+            background-color: rgb(63, 55, 63);
+            color: rgb(172, 185, 185);
+            
+                }   
+                .button-countener{
+                    display: flex;
+                    justify-content: center;
+                    margin: 15px;
+                    
+                } 
+                .button{
+                    height: 10vh;
+                    width: 15vw;
+                    margin: 10px;
+                    font-size: 50px;
+                    color: rgb(172, 185, 185);
+                    background-color: rgb(63, 57, 70);
+                    border-radius: 5px;
+                } 
+    </style>
+</head>
+<body>
+    <div id="later">
+    <input type="text" placeholder="0" id="input">
+    <div class="button-countener">
+        <button class="button" onclick="sk='';document.querySelector('input').value=sk;">C</button>
+        <button class="button" onclick="sk=sk+'1';document.querySelector('input').value=sk;">1</button>
+        <button class="button" onclick="sk=sk+'2';document.querySelector('input').value=sk;">2</button>
+        
+    </div>
+    <div class="button-countener">
+        <button class="button" onclick="sk=sk+'+';document.querySelector('input').value=sk;">+</button>
+        <button class="button" onclick="sk=sk+'3';document.querySelector('input').value=sk;">3</button>
+        <button class="button" onclick="sk=sk+'4';document.querySelector('input').value=sk;">4</button>
+        
+    </div>
+    <div class="button-countener">
+        <button class="button" onclick="sk=sk+'-';document.querySelector('input').value=sk;">-</button>
+        <button class="button" onclick="sk=sk+'5';document.querySelector('input').value=sk;">5</button>
+        <button class="button" onclick="sk=sk+'6';document.querySelector('input').value=sk;">6</button>
+        
+    </div>
+    <div class="button-countener">
+        <button class="button" onclick="sk=sk+'*';document.querySelector('input').value=sk;">*</button>
+        <button class="button" onclick="sk=sk+'7';document.querySelector('input').value=sk;">7</button>
+        <button class="button" onclick="sk=sk+'8';document.querySelector('input').value=sk;">8</button>
+        
+    </div>
+    <div class="button-countener">
+        <button class="button" onclick="sk=sk+'/';document.querySelector('input').value=sk;">/</button>
+        <button class="button"  onclick=" sk=eval(sk);document.querySelector('input').value=sk;" >=</button>
+        <button class="button"onclick="sk=sk+'9';document.querySelector('input').value=sk;">9</button>
+        
+    </div>
+    <div class="button-countener">
+        <button class="button" onclick="sk=sk+'0';document.querySelector('input').value=sk;">0</button>
+        <button class="button" onclick="sk=sk+'.';document.querySelector('input').value=sk;">.</button>
+        
+    </div>
+    </div>
+    <script>
+        let sk = '';
+        document.querySelector('input').value=sk;
+
+    </script>
+</body>
+</html>
