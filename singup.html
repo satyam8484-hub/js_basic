@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .form {
+            width: 700px;
+            
+            margin: 100px auto;
+            padding: 40px;
+            background-color: #837a7a;
+            border-radius: 10px;
+            box-shadow: rgba(161, 42, 42, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            color: #666;
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .button {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .form h1 {
+            margin: 0;
+            padding: 0;
+            
+            color: #af0f0f;
+        }
+        .form p {
+            margin: 0;
+            padding: 0;
+            color: #373232;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+       
+    </style>
+    
+</head>
+<body>
+    <form action="text"  mathod="post" >
+        <div class="form">
+            <div><h1>
+                CHANDIGARH
+            </h1>
+            <P>
+                UNIVERSITY
+            </P>
+            </div class="input">
+            <div>
+                <input type="text" id="name" placeholder="Enter username" >
+            <input type="text" itemid="mail" placeholder="Enter email" id="email">
+            <input type="text" id="number" placeholder="Enter phone number">
+           <input type="password" id="password" placeholder="Enter password">
+              <input type="password" id="cpassword" placeholder="Confirm password">
+           </div>
+           <div class="button">
+            <button type="submit">
+                submit
+            </button>
+           </div>
+           <p>
+            Already have an account? <a href="cuform.html">Login</a>
+              </p>
+        </div>
+
+    </form>
+</body>
+<script>
+
+function validateForm() {
+    var user = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var number = document.getElementById("number").value;
+    var password = document.getElementById("password").value;
+    var cpassword = document.getElementById("cpassword").value;
+
+    if (user === "") {
+        alert("Username must be filled out");
+        return false;
+    }
+    if (email === "") {
+        alert("Email must be filled out");
+        return false;
+    }
+    if (number === "") {
+        alert("Phone number must be filled out");
+        return false;
+    }
+    if (password === "") {
+        alert("Password must be filled out");
+        return false;
+    }
+    if (cpassword === "") {
+        alert("Please confirm your password");
+        return false;
+    }
+    if (cpassword !== password) {
+        alert("Passwords do not match");
+        return false;
+    }
+    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address");
+        return false;
+    }
+    var phonePattern = /^\d{10}$/;
+    if (!phonePattern.test(number)) {
+        alert("Please enter a valid 10-digit phone number");
+        return false;
+    }
+    alert("Signup successful!");
+    return true;
+}
+
+document.querySelector('form').onsubmit = function() {
+    return validateForm();
+};
+</script>
+
+</html>

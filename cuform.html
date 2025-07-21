@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: 800;
+        }
+        .form {
+            width: 700px;
+            
+            margin: 100px auto;
+            padding: 40px;
+            background-color: #837a7a;
+            border-radius: 10px;
+            box-shadow: rgba(161, 42, 42, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            color: #666;
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .button {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .form h1 {
+            margin: 0;
+            padding: 0;
+            
+            color: #af0f0f;
+        }
+        .form p {
+            margin: 0;
+            padding: 0;
+            color: #373232;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<style>
+</style>
+<body>
+    <form action="text">
+        <div class="form">
+            <div><h1>
+                CHANDIGARH
+            </h1>
+            <P>
+                UNIVERSITY
+            </P>
+            </div class="input">
+            <div>
+                <input type="text" id="user" placeholder="Enter username" >
+           <input type="password" id="password" placeholder="Enter password">
+           </div>
+           <div class="button">
+            <button type="submit">
+                submit
+            </button>
+            
+           </div>
+           <p>Creat a new account><a href="singup.html">singup</a></p>
+        </div>
+
+    </form>
+    <script>
+        function validateForm() {
+            var user = document.getElementById("user").value;
+            var password = document.getElementById("password").value;
+
+            if (user === "") {
+                alert("Username must be filled out");
+                return false;
+            }
+            if (password === "") {
+                alert("Password must be filled out");
+                return false;
+            }
+            return true;
+        }
+
+        document.querySelector('form').onsubmit = function() {
+            return validateForm();
+        };
+    </script>
+</body>
+</html>
